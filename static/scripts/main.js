@@ -12,10 +12,10 @@ const video = document.getElementById('myVideo');
 			const img = this.querySelector('img')
       if (video.paused) {
         video.play();
-        img.src = '/static/img/pause.png'
+        img.src = 'static/img/pause.png'
       } else {
         video.pause();
-        img.src = '/static/img/play.png'
+        img.src = 'static/img/play.png'
       }
     });
 
