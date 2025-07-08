@@ -2,6 +2,36 @@
 //@prepros-append script.js
 //@prepros-append jq-end.js  
 
+//VIDEO 
+const video = document.getElementById('myVideo');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const muteUnmuteBtn = document.getElementById('muteUnmuteBtn');
+
+    // Кнопка воспроизведения / паузы
+    playPauseBtn.addEventListener('click', function() {
+			const img = this.querySelector('img')
+      if (video.paused) {
+        video.play();
+        img.src = '/static/img/pause.png'
+      } else {
+        video.pause();
+        img.src = '/static/img/play.png'
+      }
+    });
+
+    // Кнопка включения / выключения звука
+    muteUnmuteBtn.addEventListener('click', function() {
+			const img = this.querySelector('img')
+      if (video.muted) {
+        video.muted = false;
+				img.src = 'static/img/sound-on.png'
+      } else {
+        video.muted = true;
+        img.src = 'static/img/sound-off.png'
+      }
+    });
+
+
 $(document).ready(function() {
 		var w=$(window).outerWidth();
 		var h=$(window).outerHeight();
@@ -36,7 +66,6 @@ var act = "click";
 if (isMobile.iOS()) {
 	var act = "touchstart";
 }
-
 
 //BURGER
 const iconMenu = document.querySelector(".icon-menu");
