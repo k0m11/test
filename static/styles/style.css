@@ -797,13 +797,58 @@ body.ie .ibg img {
   padding-top: 10px;
   margin-bottom: 20px;
 }
+
+.grid-gallery {
+  
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-right: 10px;
+
+  /* Добавляем scroll snap */
+  scroll-snap-type: x mandatory;
+}
+
 .video-container__grid {
   display: flex;
+  justify-content: center;
   width: 100%;
+  overflow-x: auto;
 }
-.video-container__grid video {
+
+.video-container__grid a {
   width: 100%;
   margin-inline: 5px;
+}
+
+.video-controls {
+  z-index: 100;
+  position: absolute;
+  bottom: 50%;
+  top: 47%;
+  left: 44%;
+}
+
+.video-controls button, .video-controls img  {
+  width: 30px;
+  height: 30px;
+  background-color: white;  
+  transition: ease all 200ms;
+}
+
+.video-controls button {
+  padding-left: 3px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
 }
 
 .controls {
@@ -813,7 +858,7 @@ body.ie .ibg img {
   bottom: -535%;
 }
 
-.controls button, .controls img {
+.controls button, .controls img{
   width: 20px;
   height: 20px;
   background-color: white;  
@@ -825,7 +870,7 @@ body.ie .ibg img {
   height: 40px;
 }
 
-.controls button:hover {
+.controls button:hover, .video-controls button:hover {
   transform: scale(1.1);
 }
 
@@ -2185,6 +2230,9 @@ body.ie .ibg img {
     right: 1%; } }
 
 @media (max-width: 1330px) {
+  .video-container__grid {
+    justify-content: left;
+  }
   .menu {
     margin: 0 25px; } }
 
@@ -2347,18 +2395,6 @@ body.ie .ibg img {
 
 
 @media (max-width: 812px) {
-  .video-container__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 70%;
-    margin: 0 auto;
-    gap: 10px;
-  }
-  .video-container__grid video {
-    width: 100%;
-    margin-inline: 5px;
-  }
   .grid-gallery {
     width: 100%;
   }
@@ -2571,9 +2607,6 @@ body.ie .ibg img {
 @media (max-width: 530px) {
   .controls {
     bottom: 39%;
-  }
-  .video-container__grid {
-    width: 90%;
   }
   .header-bottom {
     height: 100%;
