@@ -821,20 +821,36 @@ body.ie .ibg img {
   display: flex;
   justify-content: center;
   width: 100%;
+  max-width: 1400px;
   overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
 }
 
 .video-container__grid a {
   width: 100%;
-  margin-inline: 5px;
+  margin-inline: 10px;
+}
+
+.video-description {
+  margin-inline: 10px;
+}
+
+.video-description__popup {
+  font-size: 20px;
+}
+
+.video-description p, .video-description__popup p {
+  line-height: 1;
+  font-weight: 300;
 }
 
 .video-controls {
   z-index: 100;
   position: absolute;
   bottom: 50%;
-  top: 47%;
-  left: 44%;
+  top: 40%;
+  left: 38%;
 }
 
 .video-controls button, .video-controls img  {
@@ -1473,7 +1489,7 @@ body.ie .ibg img {
     cursor: pointer;
     z-index: 30;
     background-size: 100%;
-    background-image: url("static/img/close.png")
+    background-image: url("/static/img/close.png")
   }
 
 .popup__body .sending-form {
@@ -1584,7 +1600,6 @@ body.ie .ibg img {
 .header-bottom-undertitle {
   background-color: #FFC200;
   width: 500px;
-  border-radius: 25px;
   padding: 5px;
   text-align: center;
   font-size: 24px;
@@ -2230,6 +2245,10 @@ body.ie .ibg img {
     right: 1%; } }
 
 @media (max-width: 1330px) {
+  .video-controls {
+    left: 45%;
+    top: 40%;
+  }
   .video-container__grid {
     justify-content: left;
   }
@@ -2431,6 +2450,34 @@ body.ie .ibg img {
     margin-right: 25px; } }
 
 @media (max-width: 768px) {
+  #price {
+    scroll-margin-top: 110px;
+  }
+  #technics {
+    scroll-margin-top: 80px;
+  }
+  #services {
+    scroll-margin-top: 110px;
+  }
+  #video-container {
+    scroll-margin-top: 100px;
+  }
+  #gallery {
+    scroll-margin-top: 110px;
+  }
+  #connection {
+    scroll-margin-top: 70px;
+  }
+  .video-container__grid::-webkit-scrollbar {
+    display: none;
+  }
+  .video-container__grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .header-bottom__phone {
+    display: none;
+  }
   .controls {
     margin: 0 auto;
     bottom: 42%;
@@ -2605,6 +2652,30 @@ body.ie .ibg img {
     object-fit: contain; } }
 
 @media (max-width: 530px) {
+  #price {
+    scroll-margin-top: 60px;
+  }
+  #technics {
+    scroll-margin-top: 30px;
+  }
+  #services {
+    scroll-margin-top: 60px;
+  }
+  #video-container {
+    scroll-margin-top: 50px;
+  }
+  #gallery {
+    scroll-margin-top: 60px;
+  }
+  #connection {
+    scroll-margin-top: 20px;
+  }
+  .video-description {
+    display: none;
+  }
+  .video-controls {
+    top: 45%;
+  }
   .controls {
     bottom: 39%;
   }
@@ -2619,7 +2690,6 @@ body.ie .ibg img {
   .header-bottom-undertitle {
     text-align: left;
     width: 100%;
-    padding: 10px;
   }
   .header-bottom p br {
     display: none; }
@@ -2633,6 +2703,9 @@ body.ie .ibg img {
     margin: 0; } }
 
 @media (max-width: 515px) {
+  #video-container {
+    scroll-margin-top: 10px;
+  }
   .controls {
     bottom: 35%;
   }
@@ -2715,6 +2788,12 @@ body.ie .ibg img {
 }
 
 @media (max-width: 480px) {
+  #price {
+    scroll-margin-top: 20px;
+  }
+  #video-container {
+    scroll-margin-top: 0px;
+  }
   .mob-header-icons {
     display: flex;
   }
@@ -2775,15 +2854,38 @@ body.ie .ibg img {
     bottom: -60%; }
   .connection__form {
     padding: 30px 20px; } 
-  .header-bottom__phone {
-    display: block;
-    color: rgb(201, 201, 201);
-    line-height: 25px;
-    font-size: 14px;
   }
+@media (max-width: 430px) {
+  #price {
+    scroll-margin-top: -30px;
   }
+  #video-container {
+    scroll-margin-top: 20px;
+  }
+  #connection {
+    scroll-margin-top: -60px;
+  }
+}
 
 @media (max-width: 414px) {
+  #price {
+    scroll-margin-top: 10px;
+  }
+  #technics {
+    scroll-margin-top: 30px;
+  }
+  #services {
+    scroll-margin-top: 60px;
+  }
+  #video-container {
+    scroll-margin-top: 0px;
+  }
+  #gallery {
+    scroll-margin-top: 20px;
+  }
+  #connection {
+    scroll-margin-top: -30px;
+  }
   .header-icons {
     display: none;
   }
@@ -2800,6 +2902,24 @@ body.ie .ibg img {
     margin-bottom: 8px; } }
 
 @media (max-width: 380px) {
+  #price {
+    scroll-margin-top: 60px;
+  }
+  #technics {
+    scroll-margin-top: 30px;
+  }
+  #services {
+    scroll-margin-top: 50px;
+  }
+  #video-container {
+    scroll-margin-top: 40px;
+  }
+  #gallery {
+    scroll-margin-top: 50px;
+  }
+  #connection {
+    scroll-margin-top: 10px;
+  }
   .controls {
     bottom: 35%;
   }
