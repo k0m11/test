@@ -1489,7 +1489,7 @@ body.ie .ibg img {
     cursor: pointer;
     z-index: 30;
     background-size: 100%;
-    background-image: url("/static/img/close.png")
+    background-image: url("../img/close.png")
   }
 
 .popup__body .sending-form {
@@ -1584,7 +1584,7 @@ body.ie .ibg img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  background-image: url("/static/img/header-img.webp"); }
+  background-image: url("../img/header-img.webp"); }
 
 .header-bottom__video video {
   position: absolute;
