@@ -831,6 +831,7 @@ body.ie .ibg img {
   width: 100%;
   margin-left: 10px;
   margin-right: 10px;
+  margin-inline: 10px;
 }
 
 .video-description {
