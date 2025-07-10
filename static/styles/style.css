@@ -829,11 +829,14 @@ body.ie .ibg img {
 
 .video-container__grid a {
   width: 100%;
-  margin-inline: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .video-description {
-  margin-inline: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 304px;
 }
 
 .video-description__popup {
@@ -1535,7 +1538,8 @@ body.ie .ibg img {
 .mob-header-icons img {
   width: 30px;
   text-align: center;
-  margin-inline: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .header-icons {
@@ -1547,7 +1551,8 @@ body.ie .ibg img {
 .header-icons img {
   width: 25px;
   text-align: center;
-  margin-inline: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .header__logo p {

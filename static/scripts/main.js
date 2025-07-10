@@ -174,34 +174,9 @@ jQuery(".form__btn").click(function (e) {
 		$(this).siblings('input[name=tel]').css("background-color", "#ff91a4")
 		return;
 	}
-	console.log('persPhone: ', persPhone);
-	console.log('formmsg: ', formmsg);
-
-	var jqXHR = jQuery.post(
-		"sender/send.php",
-		{
-			formmsg: formmsg,
-			name: name,
-			phone: persPhone,
-			time: time,
-		}
-
-	);
-
-
-	jqXHR.done(function (responce) {
-		console.log(responce);
-		document.location.href = "../thank-you.html";
-		jQuery('input[name=name]').val("");
-		jQuery('input[name=tel]').val("");
-		jQuery('textarea[name=text]').val("");
-	});
-
-	jqXHR.fail(function (responce) {
-		console.log(responce);
-		alert("Произошла ошибка попробуйте позднее!");
-	});
-
+	else {
+		console.log("все ок")
+	}
 });
 
 //BodyLock
