@@ -818,20 +818,18 @@ body.ie .ibg img {
 }
 
 .video-container__grid {
-  display: flex;
-  justify-content: center;
+  display: grid;
   width: 100%;
   max-width: 1400px;
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 10px;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .video-container__grid a {
   width: 100%;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-inline: 10px;
 }
 
 .video-description {
